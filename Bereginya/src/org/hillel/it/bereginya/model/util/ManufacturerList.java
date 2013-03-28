@@ -1,30 +1,29 @@
 package org.hillel.it.bereginya.model.util;
 
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 import org.hillel.it.bereginya.model.entity.Manufacturer;
 
 public class ManufacturerList {
-	private LinkedList<Manufacturer> manufacturerList;
+	private Set<Manufacturer> manufacturers;
 
 	public ManufacturerList() {	
-		manufacturerList = new LinkedList<Manufacturer>();
+		manufacturers = new HashSet<Manufacturer>();
 	}
 	
 	
 	//Add new manufacturer to list
 	public void addFabricator(String name, String country) {				
-		manufacturerList.add(new Manufacturer(name, country));					
+		manufacturers.add(new Manufacturer(name, country));					
 	}
 	
 	
 	//Search Manufacturer by name and remove it from list
 	public void removeFabricator(String name) {
-		Iterator<Manufacturer> itr = manufacturerList.iterator();
+		Iterator<Manufacturer> itr = manufacturers.iterator();
 		while(itr.hasNext()) {
 			if(itr.next().getName() == name) {
-				manufacturerList.remove(itr);				
+				manufacturers.remove(itr);			
 				break;
 			}			
 		}
@@ -32,7 +31,7 @@ public class ManufacturerList {
 	
 	//Clear list of Manufacturers
 	public void clear() {
-		manufacturerList.clear();
+		manufacturers.clear();
 	}
 
 }
