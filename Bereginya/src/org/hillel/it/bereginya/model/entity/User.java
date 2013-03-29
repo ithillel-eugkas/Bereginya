@@ -2,64 +2,35 @@ package org.hillel.it.bereginya.model.entity;
 
 import java.util.Date;
 
-
-public class User {
-	enum Sex {MALE, FEMALE};	
-	private final String NAME;
+public class User {	
+	private final String LOGIN;	
 	private String password;
+	private String name;
 	private Sex sex;
 	private Date birthday;
 	private String email;
 	
-	public User(String name, String password, Sex sex, Date birthday,
-			String email) {		
-		this.NAME = name;
+	public User(String lOGIN, String password, String name, Sex sex,
+			Date birthday, String email) {
+		super();
+		LOGIN = lOGIN;
 		this.password = password;
+		this.name = name;
 		this.sex = sex;
 		this.birthday = birthday;
 		this.email = email;
 	}
-		
-	public User(String name, String password, Sex sex, String email) {
-		this.NAME = name;
-		this.password = password;
-		this.sex = sex;
-		this.email = email;
-	}
-
-	public String getName() {
-		return NAME;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public Sex getSex() {
-		return sex;
-	}
-
-	public void setSex(Sex sex) {
-		this.sex = sex;
-	}
-
-	public Date getBirthday() {
-		return birthday;
-	}
-
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}	
+	
+	public String getLOGIN()    { return LOGIN;    }
+	public String getName()     { return name;     }
+	public String getPassword() { return password; }
+	public Sex    getSex()      { return sex;	   }
+	public Date   getBirthday() { return birthday; }
+	public String getEmail()    { return email;	   }
+	
+	public void   editName(String name)          {  this.name     = name;      }
+	public void   editPassword(String password)  {  this.password = password;  }
+	public void   editSex(Sex sex)               {  this.sex      = sex;       }
+	public void   editBirthday(Date birthday)    {  this.birthday = birthday;  }
+	public void   editEmail(String email)        {  this.email    = email;     }	
 }
