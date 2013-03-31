@@ -13,9 +13,9 @@ public class ManufacturerList {
 	
 	
 	//Add new manufacturer to list
-	public void addFabricator(String name, String country) {				
-		manufacturers.add(new Manufacturer(name, country));					
-	}
+	//public void addFabricator(String name, String country) {				
+	//	manufacturers.add(new Manufacturer(name, country));					
+	//}
 	
 	
 	//Search Manufacturer by name and remove it from list

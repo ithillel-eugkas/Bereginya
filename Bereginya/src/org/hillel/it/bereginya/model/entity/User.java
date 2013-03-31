@@ -29,8 +29,9 @@ public class User {
 	public String getEmail()    { return email;	   }
 	
 	public void   editName(String name)          {  this.name     = name;      }
-	public void   editPassword(String password)  {  this.password = password;  }
 	public void   editSex(Sex sex)               {  this.sex      = sex;       }
 	public void   editBirthday(Date birthday)    {  this.birthday = birthday;  }
-	public void   editEmail(String email)        {  this.email    = email;     }	
+	public void   editEmail(String email)        {  this.email    = email;     }
+	
+	public void   editPassword(String password)  {  this.password = password;  }
 }
