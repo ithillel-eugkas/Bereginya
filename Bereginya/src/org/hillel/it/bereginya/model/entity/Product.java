@@ -52,6 +52,5 @@ public class Product {
 	public void setName(String name)                  {	this.name        = name;        }
 	public void setDescription(String description)    {	this.description = description;	}
 	public void setPrice(float price)                 {	this.price       = price;       }
-	public void setStatus(StockStatus status)         { this.status      = status;      }
 	public void setCount(int count)                   {	this.count       = count;	    }
 }

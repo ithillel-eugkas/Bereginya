@@ -21,7 +21,8 @@ public class Manufacturer {
 	public String       getName()     {	return name;	    }
 	public Country      getCountry()  {	return country;	    }
 
-	public void setProducts(Set<Product> products)    {	this.products = products; }
 	public void editName(String name)                 {	this.name     = name;     }
-	public void editCountry(Country country)          {	this.country  = country;  }
+	public void editCountry(Country country)          {	this.country  = country;  }	
+	public void addProduct(Product pr)                {	products.add(pr);         }
+	public void removeProduct(Product pr)             {	products.remove(pr);      }
 }

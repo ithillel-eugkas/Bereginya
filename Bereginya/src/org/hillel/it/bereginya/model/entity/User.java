@@ -23,8 +23,6 @@ public class User {
 	
 	public String getLOGIN()    { return LOGIN;    }
 	public String getName()     { return name;     }
-	public String getPassword() { return password; }
-	public Sex    getSex()      { return sex;	   }
 	public Date   getBirthday() { return birthday; }
 	public String getEmail()    { return email;	   }
 	
@@ -33,12 +31,23 @@ public class User {
 	public void   editBirthday(Date birthday)    {  this.birthday = birthday;  }
 	public void   editEmail(String email)        {  this.email    = email;     }
 	
+	public boolean verification(String checkPassword) {
+		if (this.password.equals(checkPassword)) return true;
+		return false;
+	}
+	
 	public void   editPassword(String oldPassword, 
 							   String newPassword, String confirmPassword)  {		
 		if(newPassword.equals(confirmPassword)) {
 			if(this.password.equals(oldPassword)) {
 				this.password = newPassword;
 			}
+			else {
+				System.out.println("Ошибка ввода пароля");
+			}		
+		}
+		else {
+			System.out.println("Ошибка подтверждения пароля");
 		}
 	}
 }
