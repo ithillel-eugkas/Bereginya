@@ -8,12 +8,12 @@ public class Manufacturer {
 	private String name;
 	private Country country;
 	private Set<Product> products = new HashSet<Product>();
-	private static int iterator=0;;
+	private static int iteratorID=0;
 	
 	public Manufacturer(String name, Country country) {	
 		this.name = name;
 		this.country = country;
-		id = ++iterator;
+		id = ++iteratorID;
 	}
 		
 	public int          getId()       {	return id;	        }

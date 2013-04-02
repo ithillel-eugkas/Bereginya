@@ -7,7 +7,7 @@ public class Product {
 	private String name;
 	private String description;
 	private float price;
-	File foto;
+	File ImageHREF;
 	private StockStatus status;
 	private int count;
 	private Manufacturer factory;
@@ -25,12 +25,12 @@ public class Product {
 
 
 	public Product(String name, Manufacturer factory, Category category, String description, float price,
-			File foto, int count) {
+			File ImageHREF, int count) {
 		id = ++iter;
 		this.name = name;
 		this.description = description;
 		this.price = price;
-		this.foto = foto;
+		this.ImageHREF = ImageHREF;
 		this.factory = factory;
 		this.category = category;
 		this.count = count;

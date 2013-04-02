@@ -14,5 +14,14 @@ public class Admin extends User{
 	public int getRole() {
 		return role.getAccess();
 	}
-
+	
+	public void addCategory(String name) {};
+	public void addManufacturer(String name, Country country) {}
+	public void addProduct() {}
+	public void removeProduct() {}
+	public void addUser() {}
+	public void deleteUser() {}
+	public void viewAllProducts() {}
+	public void editProduct() {}
+	public void editCategory() {}
 }

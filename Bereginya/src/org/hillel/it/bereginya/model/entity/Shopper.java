@@ -14,5 +14,9 @@ public class Shopper extends User{
 	public int getRole() {
 		return role.getAccess();
 	}
-
+	
+	public void addProductToBasket() {}
+	public void removeProductFromBasket() {}
+	public void changeProductCount() {}
+	public void viewSelectedProducts() {}
 }
