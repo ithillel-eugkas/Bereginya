@@ -5,12 +5,12 @@ import java.util.*;
 
 public class Basket {
 	private long id;
-	private static long iter = 0;
+	private static long iteratorID = 0;
 	private Map<Product, Integer> Items;
 	private double TotalAmount;
 
 	public Basket() {
-		id = ++iter;
+		id = ++iteratorID;
 		TotalAmount = 0.0;
 		Items = new HashMap<Product, Integer>();
 	}
@@ -25,8 +25,10 @@ public class Basket {
 		Items.remove(pr);		
 	}
 	
-	protected void changeCountOfProduct(Product pr, int count) {
+	protected void editCount(Product pr, int count) {
+		TotalAmount -= (pr.getPrice() * Items.get(pr));
 		Items.put(pr, count);
+		TotalAmount += (pr.getPrice() * count);
 	}
 	
 	protected double getTotalAmount() {
