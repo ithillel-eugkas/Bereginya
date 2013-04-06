@@ -9,6 +9,7 @@ public class User {
 	private Sex sex;
 	private Date birthday;
 	private String email;
+	private String phone;
 	
 	public User(String lOGIN, String password, String name, Sex sex,
 			Date birthday, String email) {
@@ -21,18 +22,37 @@ public class User {
 		this.email = email;
 	}
 	
+	public User(String lOGIN, String password, String name, Sex sex,
+			Date birthday, String email, String phone) {
+		LOGIN = lOGIN;
+		this.password = password;
+		this.name = name;
+		this.sex = sex;
+		this.birthday = birthday;
+		this.email = email;
+		this.phone = phone;
+	}
+	
 	public String getLOGIN()    { return LOGIN;    }
 	public String getName()     { return name;     }
 	public Date   getBirthday() { return birthday; }
 	public String getEmail()    { return email;	   }
 	
-	public void   editName(String name)          {  this.name     = name;      }
-	public void   editSex(Sex sex)               {  this.sex      = sex;       }
-	public void   editBirthday(Date birthday)    {  this.birthday = birthday;  }
-	public void   editEmail(String email)        {  this.email    = email;     }
+	public void   editName(String newName)          {  this.name     = newName;      }
+	public void   editSex(Sex newSex)               {  this.sex      = newSex;       }
+	public void   editBirthday(Date newBirthday)    {  this.birthday = newBirthday;  }
+	public void   editEmail(String newEmail)        {  this.email    = newEmail;     }
+	public void   editPhone(String newPhone)        {  this.phone    = newPhone;     }
+	
+	public String getPhone() {
+		if(phone != null) 
+			return phone;
+		return null;
+	}
 	
 	public boolean verification(String checkPassword) {
-		if (this.password.equals(checkPassword)) return true;
+		if (this.password.equals(checkPassword)) 
+			return true;
 		return false;
 	}
 	
@@ -50,4 +70,6 @@ public class User {
 			System.out.println("Ошибка подтверждения пароля");
 		}
 	}
+	
+	public void viewPersonalInfo() {}
 }

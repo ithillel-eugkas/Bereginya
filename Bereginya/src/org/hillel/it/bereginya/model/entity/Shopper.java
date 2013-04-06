@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Shopper extends User{
 	private final Role role = Role.SHOPPER;
-	private Basket basket;
+	private Order orders;
 	
 	public Shopper(String lOGIN, String password, String name, Sex sex,
 			Date birthday, String email) {
@@ -12,17 +12,18 @@ public class Shopper extends User{
 		super(lOGIN, password, name, sex, birthday, email);		
 	}
 	
+	public Shopper(String lOGIN, String password, String name, Sex sex,
+			Date birthday, String email, String phone) {
+		
+		super(lOGIN, password, name, sex, birthday, email, phone);		
+	}
+	
 	public int getRole() {
 		return role.getAccess();
 	}
 	
-	public void addProductToBasket(Product pr) {
-		if(basket==null) basket = new Basket();
-		basket.addProduct(pr, 1);		
-	}
-	public void removeProductFromBasket(Product pr) {
-		basket.removeProduct(pr);
-	}
+	public void makeOrder() {}
+	
 	
 	public void changeProductCount() {}
 	public void viewSelectedProducts() {}

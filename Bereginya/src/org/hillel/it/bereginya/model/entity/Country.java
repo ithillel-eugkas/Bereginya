@@ -3,14 +3,14 @@ package org.hillel.it.bereginya.model.entity;
 import java.util.*;
 
 public class Country {
-	private static int iterator = 0;
-	private int id;
+	private static int iteratorID = 0;
+	private final int id;
 	private String name;
 	Set<Manufacturer> mf;
 	
 	
 	public Country(String name) {
-		id = ++iterator;
+		id = ++iteratorID;
 		this.name = name;
 		if(mf == null) mf = new HashSet<Manufacturer>();
 	}

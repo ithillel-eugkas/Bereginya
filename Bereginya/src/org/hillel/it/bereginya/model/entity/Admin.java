@@ -11,12 +11,20 @@ public class Admin extends User{
 		super(lOGIN, password, name, sex, birthday, email);		
 	}
 	
+	public Admin(String lOGIN, String password, String name, Sex sex,
+			Date birthday, String email, String phone) {
+		
+		super(lOGIN, password, name, sex, birthday, email, phone);		
+	}
+	
 	public int getRole() {
 		return role.getAccess();
 	}
 	
 	public void addCategory(String name) {};
+	public void removeCategory(String name) {};
 	public void addManufacturer(String name, Country country) {}
+	public void removeManufacturer(String name) {}
 	public void addProduct() {}
 	public void removeProduct() {}
 	public void addUser() {}

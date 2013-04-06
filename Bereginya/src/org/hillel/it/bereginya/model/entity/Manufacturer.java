@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Manufacturer {
-	private int id;
+	private final int id;
 	private String name;
 	private Country country;
 	private Set<Product> products = new HashSet<Product>();
