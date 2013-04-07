@@ -4,14 +4,22 @@ import java.util.Date;
 
 public class Order {
 	private Basket basket;
-	Date date;
-	String shopper;
+	private Date date;
+	private Shopper shopper;
 	
 	public Order(Basket bs, Shopper shopper) {
 		basket = bs.cloneData();
 		bs = null;
 		date = new Date();
-		this.shopper = shopper.getLOGIN(); 
+		this.shopper = shopper; 
+	}
+	
+	public Date getDate() {
+		return date;
+	}
+	
+	public Shopper getShopper() {
+		return shopper;
 	}
 	
 	public void sendOrderToShop() {}

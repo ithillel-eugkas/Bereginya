@@ -22,9 +22,7 @@ public class Shopper extends User{
 		return role.getAccess();
 	}
 	
-	public void makeOrder() {}
-	
-	
+	public void makeOrder() {}	
 	public void changeProductCount() {}
 	public void viewSelectedProducts() {}
 }
